@@ -89,7 +89,7 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     fontSize: 32,
     textAlign: "center",
-    marginTop: 190,
+    marginTop: 120,
   },
   field1: {
     flexDirection: "column",
@@ -122,7 +122,7 @@ const styles = StyleSheet.create({
     height: "90%",
     alignSelf: "center",
     marginBottom: 40,
-    marginTop: 50,
+    marginTop: 20,
   },
 
   btn2: {

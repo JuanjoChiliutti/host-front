@@ -14,6 +14,7 @@ export default function SignupInputs() {
     const [name, setName] = useState('')
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
+    const [cuit, setCuit] = useState('')
 
     const navigation = useNavigation();
 
@@ -27,6 +28,7 @@ export default function SignupInputs() {
         body: JSON.stringify({
           'name': name, 
           'email': email,
+          'cuit': cuit,
           'password': password
         })
       })
@@ -58,9 +60,18 @@ export default function SignupInputs() {
           value={name}
           style={styles.inputEmail}
           placeholderTextColor={"#A6A4A4"}
-          placeholder="Name"
+          placeholder="Nombre"
           onChangeText={(text)=>setName(text)}
         ></TextInput>
+        <TextInput
+          name="Cuit"
+          value={cuit}
+          style={styles.inputEmail}
+          placeholderTextColor={"#A6A4A4"}
+          placeholder="CUIT de tu empresa"
+          onChangeText={(text)=>setCuit(text)}
+          >
+        </TextInput>
         <TextInput
           name="Email"
           value={email}
@@ -75,7 +86,7 @@ export default function SignupInputs() {
           style={styles.inputPassword}
           placeholderTextColor={"#A6A4A4"}
           secureTextEntry={true}
-          placeholder="Password"
+          placeholder="Contraseña"
           onChangeText={(text)=>setPassword(text)}
         ></TextInput>
         <TextInput
@@ -83,7 +94,7 @@ export default function SignupInputs() {
           style={styles.inputPassword}
           placeholderTextColor={"#A6A4A4"}
           secureTextEntry={true}
-          placeholder="Confirm Password"
+          placeholder="Confirma tu contraseña"
         ></TextInput>
       </View>
       <View style={styles.cont3}>
@@ -131,11 +142,11 @@ const styles = StyleSheet.create({
   btn2: {
     backgroundColor: "#271fb8",
     width: "90%",
-    height: "50%",
+    height: "40%",
     justifyContent: "center",
     alignSelf: "center",
-    marginBottom: 50,
-    marginTop: 30,
+    marginBottom: 70,
+    marginTop: 50,
     elevation: 4,
     shadowColor: "rgba(0, 0, 0, 0.5)", // Agrega la propiedad shadowColor para sombra en iOS
   shadowOffset: {
@@ -182,7 +193,7 @@ const styles = StyleSheet.create({
     backgroundColor: "#FFF",
     width: "82%",
     alignSelf: "center",
-    marginBottom: 10,
+    marginBottom: 15,
   },
   cont3: {
     flex: 3,

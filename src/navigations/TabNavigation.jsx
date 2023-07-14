@@ -1,12 +1,8 @@
 import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Icon } from 'react-native-elements';
-
-
-
 import Home from '../screen/Home';
 import Perfil from '../components/homeRenderOptions/Perfil';
-import Premium from '../components/homeRenderOptions/Premium';
 import Noticias from '../components/homeRenderOptions/Noticias';
 import Logout from '../components/homeRenderOptions/Logout';
 
@@ -26,9 +22,6 @@ export default function TabNavigation() {
                 break;
             case 'Perfil':
                 iconName = 'account';
-                break;
-            case 'Premium':
-                iconName = 'cart';
                 break;
             case 'Logout':
                 iconName = 'logout';
@@ -75,11 +68,6 @@ export default function TabNavigation() {
             <Tab.Screen
                 name="Perfil"
                 component={Perfil}
-                options={{ title: '', headerShown:false }}
-            />
-            <Tab.Screen
-                name="Premium"
-                component={Premium}
                 options={{ title: '', headerShown:false }}
             />
             <Tab.Screen
